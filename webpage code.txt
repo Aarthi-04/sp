@@ -1,0 +1,179 @@
+//component.css
+.spbg{
+    content: " ";
+    background: url("../images/image1.jpg") no-repeat center/cover;
+    width: 100%;
+    height: 738px;
+    position: absolute;
+}
+.spcont{
+    width: 75%;
+    height: 720px;
+    position: relative;
+    margin-left: 180px;
+    overflow-y: scroll;
+}
+.sptopic{
+    background-color: white;
+    text-align: center;
+    padding: 30px;
+
+}
+.splinks{
+    background-color: transparent;
+    display: flex;
+    justify-content: space-evenly;
+    padding-top: 40px;
+}
+.spabs{
+    justify-content: center;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 40px;
+    padding-bottom: 30px;
+    background-color: white;
+    margin-top: 40px;
+}
+.spvideo{
+    padding: 20px;
+    padding-left: 70px;
+    padding-right: 70px;
+    background-color: white;
+}
+.spabs h2, .spvideo h2, .spout h2{
+    text-align: center;
+
+}
+.spout{
+    padding: 30px;
+    justify-content: center;
+    background-color: white;
+}
+.sp1{
+    margin-top: 50px;
+}
+.spoutimg1 img{
+    height: 300px;
+    margin-left: 100px;
+}
+
+
+
+
+//video.js
+import { DefaultPlayer as Video} from 'react-html5video';
+import 'react-html5video/dist/styles.css';
+
+import vdo from './video/react.mp4';
+function Vdo(){
+    return(
+        <div>
+            <h2>Video</h2>
+            <Video autoPlay loop >
+                <source src={vdo} type='video/webm'></source>
+            </Video>
+        </div>
+    )
+}
+
+export default Vdo;
+
+
+
+
+//Component.js
+import "./css/component.css"
+
+import img1 from "./images/image2.jpg"
+import op1 from "./images/image3..png"
+import op3 from "./images/image5..png"
+import op4 from "./images/image6..png"
+
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faGithub } from '@fortawesome/free-brands-svg-icons'
+import { faFile } from '@fortawesome/free-solid-svg-icons'
+import Vdo from "./video"
+
+function Component(){
+    return(
+        <div>
+            <div className="spbg">
+                <div className="spcont">
+                    <div className="sptopic">
+                        <h2>SURVEILLANCE MARKED OBJECT DETECTION</h2>
+                        <h4>SUMMER PROJECT 2023</h4>
+                        <img src={img1}></img>
+                    </div>
+                    <div className="splinks">
+                        <a href="https://github.com/Aarthi-04/Summer_project" target="_blank">
+                            <FontAwesomeIcon icon={faGithub} style={{color: "white", width: '70px', height: '70px'}} />
+                        </a>
+                        <a href="https://drive.google.com/file/d/1_gJXknlfYpzMljlx4pOXU-vyMANxv_iV/view?usp=drive_link" target="_blank">
+                            <FontAwesomeIcon icon={faFile} size="2xl" style={{color: "white", width: '70px', height: '70px'}}/>
+                        </a>
+                    </div>
+                    <div className="spabs">
+                        <h2>Abstract</h2>
+                        <p>Rapid advancements in surveillance technology have led to an exponential increase in the number of video footages generated in different formats for security purposes.This project aims to address the above mentioned issues by developing an automated system capable of detecting and extracting frames from videos that contain marked objects. This can be achieved by using deep learning methods such as YOLO or SSD to identify specific objects or individuals in real-time or post-event analysis. The system applies the object detection model to each and filters those with marked objects. These frames are then reformatted to fit the 9:16 aspect ratio for seamless viewing experience. This approach includes various social benefits, including enhancing public safety by identification of criminal threats, minimizing resource allocation required for manual video analysis, accelerating investigation by faster evidences gathering. By automated marked object detection in surveillance videos, this project contributes to a safer and accountable society</p>
+                    </div>
+                    <div className="spvideo">
+                        <Vdo />
+                    </div>
+                    <div className="spout">
+                        <h2>Algorithms and Output</h2>
+                        <div className="sp1">
+                            <h3 className="spside">PREPROCESSING</h3>
+                            <p className="spcon">Pre-processing is a crucial initial step in the video analysis pipeline. Its primary goal is to ensure that the incoming video data is in a format suitable for subsequent analysis. One of the key tasks in pre-processing is aspect ratio conversion. This involves adjusting the dimensions of the video frames to a standard aspect ratio, thereby ensuring uniformity across all frames. By doing so, potential distortions are minimized, and the subsequent analysis steps can operate consistently.
+Aspect ratio conversion involves resizing the frames while maintaining their original proportions. In addition to aspect ratio conversion, other pre-processing steps might include noise reduction and frame alignment. These steps collectively contribute to improving the quality of the video input and preparing it for accurate object detection.
+</p>
+                        </div>
+                        <div className="spoutimg1">
+                            <img src={op1}></img>
+                        </div>
+                        <div className="sp1">
+                            <h3 className="spside">OBJECT DETECTION</h3>
+                            <p className="spcon">The Object Detection subsystem is powered by the YOLOv3 model with pretrained weights. This advanced deep learning architecture excels in real-time object detection, capable of identifying multiple objects in a single frame pass. YOLOv3 provides confidence scores and class labels for each detected object, ensuring robust predictions. Its real-time processing efficiency is particularly advantageous for video analysis, swiftly analyzing frames and generating accurate object predictions.</p>
+                        </div>
+                        <div className="spoutimg2">
+                            <img src={op3} style={{marginLeft: "200px" ,width:"50%",height:"50%"}}></img>
+                        </div>
+                        <div className="sp1">
+                            <h3 className="spside">MARKING CRITERIA</h3>
+                            <p className="spcon">The Marking Criteria are integral to the analysis process, determining the significance of detected objects. Anchored by a confidence threshold, these criteria filter out objects with lower confidence scores, focusing on reliable detections. This approach enhances accuracy by excluding potential noise or false positives. The customizable threshold allows adaptation to specific project needs, enabling fine-tuning of the analysis. Ultimately, the Marking Criteria play a crucial role in refining the analysis output, ensuring that only objects meeting the defined 
+confidence level contribute to the subsequent stages of the project.
+</p>
+                        </div> 
+                        <div className="spoutimg3">
+                            <img src={op4} style={{marginLeft: "200px"}}></img>
+                        </div>
+                        <div className="sp1">
+                            <h3 className="spside">FRAME SELECTION</h3>
+                            <p>Frame Selection and Processing focus on individual frames, extracting frames with objects of user interest highlighted. These selected frames are then saved to a designated directory. The Output Video Creation subsystem compiles the processed frames, featuring prominently marked objects, into a cohesive output video. This final video provides a consolidated view of the detected objects, offering insights for analysis and understanding.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    )
+}
+
+export default Component
+
+
+
+
+
+
+
+//App.js
+import Component from "./Component"
+
+function App(){
+  return(
+    <div>
+      <Component />
+    </div>
+  )
+}
+
+export default App
