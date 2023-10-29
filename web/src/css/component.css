@@ -24,6 +24,10 @@
     padding: 30px;
 
 }
+.spname, .spteam
+{
+    text-align:center;
+}
 
 .sptopic h1{
     font-size: 45px;
