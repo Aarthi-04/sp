@@ -24,6 +24,10 @@
     padding: 30px;
 
 }
+.spname, .spteam
+{
+    text-align:center;
+}
 
 .sptopic h1{
     font-size: 45px;
@@ -96,8 +100,4 @@
 .spoutimg2 img{
     height: 300px;
     width: 900px;
-}
-.spname, .spteam
-{
-    text-align:center;
 }
