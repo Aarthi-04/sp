@@ -88,6 +88,14 @@ confidence level contribute to the subsequent stages of the project.
                             <h3 className="spside">FRAME SELECTION</h3>
                             <p>Frame Selection and Processing focus on individual frames, extracting frames with objects of user interest highlighted. These selected frames are then saved to a designated directory. The Output Video Creation subsystem compiles the processed frames, featuring prominently marked objects, into a cohesive output video. This final video provides a consolidated view of the detected objects, offering insights for analysis and understanding.</p>
                         </div>
+                        <div className = "spname">
+                             <h1>Under the guidance of</h1>
+                             <p style={{fontSize: "25px"}}>Dr.M.Deivamani, Assistent Professor</p>   
+                        </div>
+                        <div className = "spteam">
+                            <h1>TeamMembers</h1>
+                            <p style={{fontSize: "25px"}}>R. Aarthi, E. Hematharsini</p>
+                        </div>
         
 
                     </div>
